@@ -67,7 +67,7 @@ function getGithubUserDetails(username) {
 
                 // user Bio
 
-                userBio.innerText = data['bio'];   // not  proper correct format ... make changes.
+                userBio.innerText = data['bio'] == null ? username : data['bio'];   // not  proper correct format ... make changes.
 
                 // data info...
 
@@ -79,7 +79,7 @@ function getGithubUserDetails(username) {
                 // social media section..
 
                 userLocation.innerHTML = data['location'];
-                userBlog.innerText = data['blog'];
+                userBlog.innerText = data['html_url'];
                 userCompany.innerText = data['company'];
                 userTwitter.innerText = data['twitter_username'];
 
